@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Web Solutions | SM Gedeza Dev</title>
+    <meta name="description" content="High-end, affordable website packages by Sfundo Mnyandu. Specialized in Portfolio, Booking, and E-commerce systems.">
+    <meta name="author" content="Sfundo Mnyandu">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Lucide Icons Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="Package.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-inner">
+            <a href="Home.html" class="brand-logo">
+                SM Gedeza <span class="brand-tag">DEV</span>
+            </a>
+            
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="Home.html" class="nav-link">Home</a></li>
+                    <li><a href="Project.html" class="nav-link">Projects</a></li>
+                    <li><a href="About.html" class="nav-link">About</a></li>
+                    <li><a href="Package.html" class="nav-link active">Packages</a></li>
+                    <li><a href="Contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+                    <i data-lucide="moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-wrapper container">
+
+        <!-- Hero Section Header -->
+        <div class="page-hero">
+            <span class="section-label">Service Solutions</span>
+            <h1 class="hero-title">Transparent Pricing & <span>SLA Tiers</span></h1>
+            <p class="hero-subtitle">Scalable, high-performance web systems engineered for growth and built to convert.</p>
+        </div>
+
+        <!-- Accessible Tab Navigation Switcher -->
+        <div class="package-tabs" role="tablist" aria-label="Package Categories">
+            <button class="tab-button active" role="tab" id="tab-portfolio" aria-selected="true" aria-controls="portfolio" data-target="portfolio">
+                <i class="fas fa-briefcase"></i> Corporate & Portfolio
+            </button>
+            <button class="tab-button" role="tab" id="tab-booking" aria-selected="false" aria-controls="booking" data-target="booking">
+                <i class="fas fa-calendar-alt"></i> Booking Systems
+            </button>
+            <button class="tab-button" role="tab" id="tab-ecommerce" aria-selected="false" aria-controls="ecommerce" data-target="ecommerce">
+                <i class="fas fa-shopping-bag"></i> E-Commerce Shop
+            </button>
+        </div>
+
+        <!-- Tab 1: Corporate & Portfolio -->
+        <section id="portfolio" class="tab-section active" role="tabpanel" aria-labelledby="tab-portfolio">
+            <div class="package-cards">
+                
+                <!-- Starter Tier -->
+                <div class="package-card">
+                    <div class="card-header">
+                        <h3>Starter</h3>
+                        <p class="card-desc">Essential online presence for individuals & startups.</p>
+                        <div class="price">R1,500 <span class="price-suffix">/ once off</span></div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> <span><strong>3 Custom Pages</strong> designed to brand specs</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Responsive Mobile-First Architecture</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Modern Interactive Contact Form</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Basic Technical SEO Setup</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Fast Loading Speed Optimization</span></li>
+                    </ul>
+                    <a href="mailto:mnyandusfundo92@gmail.com?subject=Starter%20Package%20Inquiry" class="cta-button secondary">Select Plan</a>
+                </div>
+
+                <!-- Business Tier (Featured) -->
+                <div class="package-card featured">
+                    <div class="badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>Business</h3>
+                        <p class="card-desc">Advanced solution for established businesses seeking dynamic growth.</p>
+                        <div class="price">R3,500 <span class="price-suffix">/ once off</span></div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> <span><strong>5–7 Premium Pages</strong> with custom layouts</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Interactive Motion & UI Animations</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Content Management System (CMS)</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Advanced Google SEO & Analytics Integration</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Social Media Integration & Feeds</span></li>
+                    </ul>
+                    <a href="mailto:mnyandusfundo92@gmail.com?subject=Business%20Package%20Inquiry" class="cta-button primary">Select Plan</a>
+                </div>
+
+                <!-- Enterprise Tier -->
+                <div class="package-card">
+                    <div class="card-header">
+                        <h3>Enterprise</h3>
+                        <p class="card-desc">Tailored web applications with complete administrative control.</p>
+                        <div class="price">R6,000+ <span class="price-suffix">/ custom quote</span></div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> <span><strong>Unlimited Custom Pages</strong> & System Views</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Custom Full-Stack Web Application</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Dedicated Secure Admin Dashboard</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Custom API Integrations</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Priority 24/7 SLA Support</span></li>
+                    </ul>
+                    <a href="mailto:mnyandusfundo92@gmail.com?subject=Enterprise%20Package%20Inquiry" class="cta-button secondary">Select Plan</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tab 2: Booking Systems -->
+        <section id="booking" class="tab-section" role="tabpanel" aria-labelledby="tab-booking">
+            <div class="package-cards single-featured">
+                <div class="package-card featured">
+                    <div class="badge">Efficiency Engine</div>
+                    <div class="card-header">
+                        <h3>Service Pro Booking</h3>
+                        <p class="card-desc">Automate appointments, prevent double bookings, and manage clients.</p>
+                        <div class="price">R4,500 <span class="price-suffix">/ once off</span></div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-calendar-check"></i> <span>24/7 Automated Online Client Scheduling</span></li>
+                        <li><i class="fas fa-bell"></i> <span>Instant Email & SMS Confirmation Notifications</span></li>
+                        <li><i class="fas fa-users-cog"></i> <span>Centralized Client Management Database</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Google / Outlook Calendar Integration</span></li>
+                        <li><i class="fas fa-credit-card"></i> <span>Optional Booking Deposit Integration</span></li>
+                    </ul>
+                    <a href="mailto:mnyandusfundo92@gmail.com?subject=Booking%20System%20Inquiry" class="cta-button primary">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3: E-Commerce Store -->
+        <section id="ecommerce" class="tab-section" role="tabpanel" aria-labelledby="tab-ecommerce">
+            <div class="package-cards single-featured">
+                <div class="package-card featured">
+                    <div class="badge">E-Commerce Ready</div>
+                    <div class="card-header">
+                        <h3>Online Store Pro</h3>
+                        <p class="card-desc">Fully conversion-focused online shop with secure payment processing.</p>
+                        <div class="price">R8,500+ <span class="price-suffix">/ custom scope</span></div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-boxes"></i> <span>Full Catalog & Inventory Management System</span></li>
+                        <li><i class="fas fa-lock"></i> <span>PayFast, Yoco, or Stripe Payment Integration</span></li>
+                        <li><i class="fas fa-shipping-fast"></i> <span>Automated Order Tracking & Invoicing</span></li>
+                        <li><i class="fas fa-tags"></i> <span>Coupon Code & Discount Engine</span></li>
+                        <li><i class="fas fa-shield-alt"></i> <span>SSL Encryption & PCI Security Compliance</span></li>
+                    </ul>
+                    <a href="mailto:mnyandusfundo92@gmail.com?subject=Ecommerce%20Store%20Inquiry" class="cta-button primary">Build Store</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add-Ons Section -->
+        <section class="addons-section">
+            <div class="section-intro">
+                <h2>Professional Add-Ons</h2>
+                <p>Enhance your package with specialized add-on capabilities</p>
+            </div>
+            <div class="addon-grid">
+                <div class="addon-card">
+                    <div class="addon-icon"><i class="fas fa-file-code"></i></div>
+                    <h4>Extra Custom Page</h4>
+                    <p class="addon-price">R250 – R500</p>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-icon"><i class="fas fa-tools"></i></div>
+                    <h4>Monthly Maintenance</h4>
+                    <p class="addon-price">R200 <span>/ month</span></p>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h4>Vector Logo Design</h4>
+                    <p class="addon-price">R450</p>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h4>Speed Optimization</h4>
+                    <p class="addon-price">R600</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+       <footer class="footer">
+        <div class="footer-left">
+            <img src="image/Black and Gold Elegant Modern Initial Name Logo.png" alt="SM Gedeza Corporate Seal">
+            <p>Informatics Solutions & Professional Web Design.</p>
+            <p style="font-size: 0.75rem; margin-top: 15px; opacity: 0.5;">&copy;2026 SM GEDEZA DEVELOPER, RSA. All Rights Reserved.</p>
+        </div>
+        <div class="footer-right">
+            <div class="footer-links">
+                <h4>Index Router</h4>
+                <a href="Home.html">System Root</a>
+                <a href="About.html">Biometrics</a>
+                <a href="Package.html">SLA Tiers</a>
+                <a href="Contact.html">Communications Terminal</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Secure Communications Terminal</h4>
+                <p><i class="fas fa-envelope" style="color:var(--accent);"></i> <a href="mailto:mnyandusfundo92@gmail.com" style="display:inline; color:inherit;">mnyandusfundo92@gmail.com</a></p>
+                <p><i class="fas fa-phone" style="color:var(--accent);"></i> +27 79 491 1223</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/27794911223" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!---------------- Interactive Script ------------------>
+    <!------------------------------------------------------>
+    <script src="Package.js"></script>
+    
+    <!-------------------------------------------------------->
+</body>
+</html>
