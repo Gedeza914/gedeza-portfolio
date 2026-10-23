@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Web Solutions | SM Gedeza Dev</title>
+    <title>Packages | SM Gedeza Dev</title>
     <meta name="description" content="High-end, affordable website packages by Sfundo Mnyandu. Specialized in Portfolio, Booking, and E-commerce systems.">
     <meta name="author" content="Sfundo Mnyandu">
 
@@ -14,9 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <!-- Lucide Icons Library -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.468.0"></script>
+    <script src="theme.js"></script>
 
     <link rel="stylesheet" href="Package.css">
+    <link rel="stylesheet" href="polish.css">
+    <link rel="icon" type="image/png" href="image/Logo.png">
 </head>
 <body>
 
@@ -28,7 +31,7 @@
             </a>
             
             <nav aria-label="Main Navigation">
-                <ul class="nav-links" id="navLinks">
+                <ul class="nav-links">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="Project.html" class="nav-link">Projects</a></li>
                     <li><a href="About.html" class="nav-link">About</a></li>
@@ -39,7 +42,7 @@
 
             <div class="nav-controls">
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
-                    <i data-lucide="moon" id="themeIcon"></i>
+                    <i data-lucide="moon"></i>
                 </button>
             </div>
         </div>
@@ -204,11 +207,12 @@
     </main>
 
     <!-- Footer -->
-       <footer class="footer">
+    <footer class="footer">
+        <div class="container footer-inner">
         <div class="footer-left">
-            <img src="image/Black and Gold Elegant Modern Initial Name Logo.png" alt="SM Gedeza Corporate Seal">
+            <img loading="lazy" decoding="async" src="image/Black and Gold Elegant Modern Initial Name Logo.png" alt="SM Gedeza Corporate Seal">
             <p>Informatics Solutions & Professional Web Design.</p>
-            <p style="font-size: 0.75rem; margin-top: 15px; opacity: 0.5;">&copy;2026 SM GEDEZA DEVELOPER, RSA. All Rights Reserved.</p>
+            <p class="copyright">&copy; 2026 SM GEDEZA DEVELOPER, RSA. All Rights Reserved.</p>
         </div>
         <div class="footer-right">
             <div class="footer-links">
@@ -220,21 +224,16 @@
             </div>
             <div class="footer-contact">
                 <h4>Secure Communications Terminal</h4>
-                <p><i class="fas fa-envelope" style="color:var(--accent);"></i> <a href="mailto:mnyandusfundo92@gmail.com" style="display:inline; color:inherit;">mnyandusfundo92@gmail.com</a></p>
-                <p><i class="fas fa-phone" style="color:var(--accent);"></i> +27 79 491 1223</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:mnyandusfundo92@gmail.com">mnyandusfundo92@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> +27 79 491 1223</p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://wa.me/27794911223" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/27794911223" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
+        </div>
     </footer>
 
-    <!---------------- Interactive Script ------------------>
-    <!------------------------------------------------------>
     <script src="Package.js"></script>
-    
-    <!-------------------------------------------------------->
 </body>
 </html>

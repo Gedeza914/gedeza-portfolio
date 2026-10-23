@@ -16,6 +16,7 @@
       --accent: #111111;
       --accent-light: #f0f0f0;
       --accent-signal: #10b981;
+      --accent-glow: rgba(17, 17, 17, 0.2);
 
       --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
       --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
@@ -35,6 +36,7 @@
       --accent: #ffffff;
       --accent-light: #20262c;
       --accent-signal: #10b981;
+      --accent-glow: rgba(255, 255, 255, 0.25);
 
       --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
       --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
@@ -146,8 +148,13 @@
       transition: color var(--transition-fast);
     }
 
-    .nav-link:hover {
+    .nav-link:hover,
+    .nav-link.active {
       color: var(--text-primary);
+    }
+
+    .text-muted {
+      color: var(--text-muted);
     }
 
     .nav-controls {
@@ -339,19 +346,7 @@
       background-color: var(--border);
     }
 
-    .monogram {
-      font-size: 5rem;
-      font-weight: 900;
-      line-height: 1;
-      letter-spacing: -0.05em;
-      color: var(--text-primary);
-    }
-
-    .monogram span {
-      color: var(--accent);
-    }
-
-    .board-index {
+.board-index {
       font-family: var(--font-mono);
       font-size: 0.7rem;
       letter-spacing: 0.08em;
@@ -565,11 +560,7 @@
       font-weight: 600;
     }
 
-    .capability-icon {
-      color: var(--accent);
-    }
-
-    .capability h3 {
+.capability h3 {
       font-size: 1.4rem;
       font-weight: 700;
       line-height: 1.2;
@@ -600,11 +591,7 @@
     /* ==========================================================================
        06. Selected Work Section
        ========================================================================== */
-    .work-intro {
-      margin-bottom: 3rem;
-    }
-
-    .project-card {
+.project-card {
       background-color: var(--bg-secondary);
       border: 1px solid var(--border);
       border-radius: 16px;
@@ -741,7 +728,7 @@
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 212, 255, 0.1);
-    transition: var(--transition);
+    transition: all var(--transition-base);
 }
 
 .hero-image-side img:hover {
@@ -837,17 +824,7 @@
       max-width: 32rem;
     }
 
-    .contact-email {
-      display: inline-block;
-      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-      font-weight: 700;
-      color: var(--accent);
-      margin-top: 2rem;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.2rem;
-    }
-
-    .contact-links {
+.contact-links {
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -872,57 +849,12 @@
       background-color: var(--bg-secondary);
     }
 
-    .footer {
-      border-top: 1px solid var(--border);
-      padding: 3rem 0;
-      background-color: var(--bg-secondary);
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .footer-inner {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-
-    .footer-brand {
-      font-size: 1.2rem;
-      font-weight: 800;
-    }
-
-    .footer-brand span {
-      color: var(--accent);
-    }
-
-    .footer p {
+.footer p {
       font-size: 0.85rem;
       color: var(--text-muted);
     }
 
-    .footer-socials {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .footer-socials .unavailable {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    /* ==========================================================================
+/* ==========================================================================
        09. Scroll Reveals & Modal Dialog
        ========================================================================== */
     .reveal {
@@ -998,7 +930,7 @@
             justify-content: space-between;
             padding: 80px 8%;
             background: #020506;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid var(--border);
         }
 
         .footer-left {
@@ -1011,6 +943,12 @@
             height: 45px;
             margin-bottom: 20px;
             object-fit: contain;
+        }
+
+        .copyright {
+            margin-top: 15px;
+            font-size: 0.75rem !important;
+            opacity: 0.5;
         }
 
         .footer-left p {
@@ -1044,7 +982,7 @@
             text-decoration: none;
             margin: 12px 0;
             font-size: 0.88rem;
-            transition: var(--transition);
+            transition: all var(--transition-base);
         }
 
         .footer-links a:hover {
@@ -1061,14 +999,14 @@
             width: 38px;
             height: 38px;
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-muted);
             font-size: 0.95rem;
-            transition: var(--transition);
+            transition: all var(--transition-base);
         }
 
         .social-icons a:hover {
@@ -1083,11 +1021,16 @@
         @media (max-width: 1024px) {
             header { padding: 20px 5%; }
             .hero { padding: 60px 5%; }
-            .hero-container { flex-direction: column-reverse; text-align: center; gap: 40px; }
             .hero-content p { margin: 0 auto 35px auto; }
-            .btn-group { justify-content: center; }
-            #myself { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-            .cards-grid { grid-template-columns: 1fr; gap: 40px; }
-            .vertical-line { display: none; }
             .footer-right { justify-content: flex-start; gap: 40px; }
         }
+/* Footer email/phone links inherit the footer text colour */
+.footer-contact p a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact p a:hover {
+    color: var(--accent);
+}

@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projects & Architectural Systems | Gedeza</title>
+    <title>Projects | SM Gedeza Dev</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.468.0"></script>
+    <script src="theme.js"></script>
 
     <!-- Project CSS -->
     <link rel="stylesheet" href="Project.css">
+    <link rel="stylesheet" href="polish.css">
+    <link rel="icon" type="image/png" href="image/Logo.png">
 </head>
 
 <body>
@@ -79,10 +82,10 @@
                     class="theme-toggle"
                     id="themeToggle"
                     type="button"
-                    aria-label="Switch to dark mode"
-                    title="Switch theme">
+                    aria-label="Toggle theme"
+                    title="Toggle theme">
 
-                    <i data-lucide="moon" id="themeIcon"></i>
+                    <i data-lucide="moon"></i>
 
                 </button>
 
@@ -221,10 +224,8 @@
                 <!-- Project Image -->
                 <div class="window-screen">
 
-                    <img
-                        src="image/MNYAND.jpg"
-                        alt="Portfolio Terminal View"
-                        onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'">
+                    <img loading="lazy" decoding="async" src="image/MNYAND.jpg"
+                        alt="Preview of the SM Gedeza portfolio website">
 
                     <div class="screen-overlay"></div>
 
@@ -267,7 +268,7 @@
                     <div class="card-actions">
 
                         <button
-                            class="btn-launch projected"
+                            class="btn-launch"
                             type="button"
                             data-url="index.html">
 
@@ -298,6 +299,8 @@
         </div>
 
     
+
+    </section>
 
     <!-- =========================================================
          PROJECT MODAL
@@ -331,7 +334,7 @@
 
     </div>
 
-</section>
+
 
     <!-- =========================================================
          FOOTER
@@ -340,19 +343,14 @@
 
         <div class="footer-left">
 
-            <img
-                src="image/Black and Gold Elegant Modern Initial Name Logo.png"
-                alt="Gedeza Seal"
-                onerror="this.style.display='none'">
+            <img loading="lazy" decoding="async" src="image/Black and Gold Elegant Modern Initial Name Logo.png"
+                alt="SM Gedeza logo">
 
             <p>
                 Informatics Solutions & Professional Web Design.
             </p>
 
-            <p class="copyright">
-                &copy; 2026 SM GEDEZA DEVELOPER, RSA.
-                All Rights Reserved.
-            </p>
+            <p class="copyright">&copy; 2026 SM GEDEZA DEVELOPER, RSA. All Rights Reserved.</p>
 
         </div>
 
@@ -361,90 +359,27 @@
 
             <!-- Footer Navigation -->
             <div class="footer-links">
-
-                <h4>
-                    Router
-                </h4>
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="About.html">
-                    About
-                </a>
-
-                <a href="Package.html">
-                    Services
-                </a>
-
-                <a href="Contact.html">
-                    Contact
-                </a>
-
-            </div>
+                    <h4>Index Router</h4>
+                    <a href="index.html">System Root</a>
+                    <a href="About.html">Biometrics</a>
+                    <a href="Package.html">SLA Tiers</a>
+                    <a href="Contact.html">Communications Terminal</a>
+                </div>
 
 
             <!-- Contact -->
             <div class="footer-contact">
 
-                <h4>
-                    Contact Terminal
-                </h4>
+                <h4>Secure Communications Terminal</h4>
 
-                <p>
-                    <i class="fas fa-envelope"></i>
-                    mnyandusfundo92@gmail.com
-                </p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:mnyandusfundo92@gmail.com">mnyandusfundo92@gmail.com</a></p>
 
-                <p>
-                    <i class="fas fa-phone"></i>
-                    +27 79 491 1223
-                </p>
+                <p><i class="fas fa-phone"></i> +27 79 491 1223</p>
 
 
                 <!-- Social Media -->
                 <div class="social-icons">
-
-                    <a
-                        href="#"
-                        title="LinkedIn"
-                        aria-label="LinkedIn">
-
-                        <i class="fab fa-linkedin-in"></i>
-
-                    </a>
-
-                    <a
-                        href="https://www.facebook.com/"
-                        target="_blank"
-                        title="Facebook"
-                        aria-label="Facebook">
-
-                        <i class="fab fa-facebook"></i>
-
-                    </a>
-
-                    <a
-                        href="https://github.com/"
-                        target="_blank"
-                        title="GitHub"
-                        aria-label="GitHub">
-
-                        <i class="fab fa-github"></i>
-
-                    </a>
-
-                    <a
-                        href="https://wa.me/27794911223"
-                        target="_blank"
-                        title="WhatsApp"
-                        aria-label="WhatsApp">
-
-                        <i class="fab fa-whatsapp"></i>
-
-                    </a>
-
+                    <a href="https://wa.me/27794911223" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
 
             </div>

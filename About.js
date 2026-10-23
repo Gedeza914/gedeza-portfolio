@@ -1,64 +1,33 @@
- // Initialize Lucide Icons
-    lucide.createIcons();
+// About.html behaviour (theme toggle + icons live in theme.js)
 
-    // Theme Toggle Functionality
-    const themeToggleBtn = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const htmlElement = document.documentElement;
-
-    function setTheme(theme) {
-      if (theme === 'dark') {
-        htmlElement.classList.add('dark');
-        themeIcon.setAttribute('data-lucide', 'sun');
-      } else {
-        htmlElement.classList.remove('dark');
-        themeIcon.setAttribute('data-lucide', 'moon');
-      }
-      lucide.createIcons();
-      localStorage.setItem('theme', theme);
+// Scroll reveals
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.15 });
 
-    // Check saved theme or preference
-    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    setTheme(savedTheme);
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    themeToggleBtn.addEventListener('click', () => {
-      const isDark = htmlElement.classList.contains('dark');
-      setTheme(isDark ? 'light' : 'dark');
-    });
+// Project detail modal
+const modalBackdrop = document.getElementById('modalBackdrop');
 
-    // Scroll Reveal Observer
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.15
-    };
+function openModal() {
+  if (!modalBackdrop) return;
+  modalBackdrop.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
 
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
+function closeModal() {
+  if (!modalBackdrop) return;
+  modalBackdrop.style.display = 'none';
+  document.body.style.overflow = '';
+}
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // Modal Handling
-    const modalBackdrop = document.getElementById('modalBackdrop');
-
-    function openModal(projectId) {
-      modalBackdrop.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modalBackdrop.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-
-    // Close modal on outside click
-    modalBackdrop.addEventListener('click', (e) => {
-      if (e.target === modalBackdrop) closeModal();
-    });
+modalBackdrop?.addEventListener('click', e => {
+  if (e.target === modalBackdrop) closeModal();
+});
+window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
